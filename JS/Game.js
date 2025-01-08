@@ -19,8 +19,8 @@ class Game{
       mushroom = [10]
 
       for(var i = 0; i<10;i++){
-        var randX = Math.floor(Math.random() * 1400) + 300;
-        var randY = Math.floor(-150-Math.random() * 3400);
+        var randX = Math.floor(Math.random() * displayWidth*4/6) + displayWidth/6;
+        var randY = Math.floor(Math.random() * displayHeight*-4*9/10);
         console.log(randX)
         console.log(randY)
 
@@ -34,8 +34,8 @@ class Game{
       laser = [10]
 
       for(var i = 0; i<2;i++){
-        var randX = Math.floor(Math.random() * 1400) + 300;
-        var randY = -4000;
+        var randX = Math.floor(Math.random() * displayWidth*4/6) + displayWidth/6;
+        var randY = -4*displayHeight*9/10;
         console.log(randX)
         console.log(randY)
 
@@ -54,8 +54,8 @@ class Game{
        wall = [5]
 
       for(var i = 0; i<10;i++){
-        var randX = Math.floor(Math.random() * 1400) + 300;
-        var randY = Math.floor(-150-Math.random() * 3400);
+        var randX = Math.floor(Math.random() * displayWidth*4/6) + displayWidth/6;
+        var randY = Math.floor(Math.random() * displayHeight*-4*9/10);
         console.log(randX)
         console.log(randY)
 
@@ -72,8 +72,8 @@ class Game{
       teleporter = [5]
 
       for(var i = 0; i<10;i++){
-        var randX = Math.floor(Math.random() * 1400) + 300;
-        var randY = Math.floor(-150-Math.random() * 3400);
+        var randX = Math.floor(Math.random() * displayWidth*4/6) + displayWidth/6;
+        var randY = Math.floor(Math.random() * displayHeight*-4*9/10);
         console.log(randX)
         console.log(randY)
 
@@ -426,45 +426,45 @@ class Game{
               } 
 
 
-          if(player.index == 1 && car1.x<331){
+          if(player.index == 1 && car1.x<displayWidth/6){
               player.x +=13
               player.update();
           }
        
-          if(player.index == 1 && car1.x>1605){
+          if(player.index == 1 && car1.x>displayWidth*5/6){
               player.x -=13
               player.update();
           }
         
-        if(player.index == 2 && car2.x<331){
+        if(player.index == 2 && car2.x<displayWidth/6){
               player.x +=13
               player.update();
           }
-          if(player.index == 2 && car2.x>1605){
+          if(player.index == 2 && car2.x>displayWidth*5/6){
               player.x -=13
               player.update();
           }
 
-        if(player.index == 3 && car3.x<331){
+        if(player.index == 3 && car3.x<displayWidth/6){
               player.x +=13
               player.update();
           }
-          if(player.index == 3 && car3.x>1605){
+          if(player.index == 3 && car3.x>displayWidth*5/6){
               player.x -=13
               player.update();
           }
 
-        if(player.index == 4 && car4.x<331){
+        if(player.index == 4 && car4.x<displayWidth/6){
               player.x +=13
               player.update();
           }
-          if(player.index == 4 && car4.x>1605){
+          if(player.index == 4 && car4.x>displayWidth*5/6){
               player.x -=13
               player.update();
           }
 
-
-            if(player.distance>5350){
+            print(car4.x);
+            if(player.distance>5*displayHeight*19/20){
                 gameState = 2
                 if(player.carsAtEnd<4){
 
